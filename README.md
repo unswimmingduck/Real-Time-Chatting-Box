@@ -75,3 +75,10 @@ $ python chatting-box\test\main.py
 ![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/assets/111033998/1d656030-b725-4a1a-b911-6707d510eae4)  
 &emsp;&emsp; **Waht's more, thanks to the Threading, we also can send text message when we use Real-Time-Video Chatting. The following gif shows how the function works. You also can [click here](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/video.gif) to see how the Real-Time-Video Chatting works.**  
 ![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/video.gif)
+### 3.4 File Transfer
+&emsp;&emsp; **We have chosen the TCP protocol for the file transfer process because we need to ensure the accuracy of the file transfer. What's more, in order to ensure the correctness of the file transfer, we also need to introduce MD5 encryption to further ensure the correctness of the file transfer**
+&emsp;&emsp; **However, I meet a problem in filing transfer. We introduce MD5 encryption to ensure the correctness of the file transfer, but there always exist an erro that the file transfer occur an erro. Nevertheless, contrasting the sending file with the received file, there dosenot have any visual difference. After I searchinng many information, I konw that the erro happen because I didnot pay attention to the common problem in file transfer: the problem of TCP packet fragmentation. The following gif shows the problem of TCP packet fragmentation in file transfer.**  
+![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/file_transition.gif)
+&emsp;&emsp; **So, we need to solve the problem of sticky packets in the process of sending files, we can solve the problem of sticky packets by reading the file size before sending the file and adjusting the length of the last received file when the reading is about to be completed.**   
+&emsp;&emsp; **In the following image, you can see the structure of how we achieve the function of file transfer.**
+![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/assets/111033998/322583e6-4918-4d12-9748-5aeb5621e9f7)
