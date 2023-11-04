@@ -67,7 +67,8 @@ $ python chatting-box\test\main.py
 &emsp;&emsp;![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/assets/111033998/cabdfacb-0888-42be-8cdf-3f6fce4782f5)
 
 
-&emsp;&emsp; **At the same time, we hope that the loop of receiving messages and the loop of the interactive interface can not interfere with each other, so we need to introduce the operation of threads, and put the loop of receiving messages in a thread, so that the loop of receiving messages can be executed independently without interference. The following gif shows the reslut of text chatting function.**    
+&emsp;&emsp; **At the same time, we hope that the loop of receiving messages and the loop of the interactive interface can not interfere with each other, so we need to introduce the operation of threads, and put the loop of receiving messages in a thread, so that the loop of receiving messages can be executed independently without interference.   
+&emsp;&emsp;The following gif shows the reslut of text chatting function.**    
   &emsp;&emsp;![com](https://github.com/unswimmingduck/Real-Time-Chatting-Box/assets/111033998/f039926c-8f1d-45ef-bd27-1cfc13e6c291)
 
 ### 3.3 Real-Time-Video Chatting
