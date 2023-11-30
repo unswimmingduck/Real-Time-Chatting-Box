@@ -13,9 +13,16 @@
 ## 1. Introduction
 &emsp;&emsp;This is a chatting box based on TCP and UDP that can achieve text chatting, real-time video chatting and file transfer.   
 &emsp;&emsp;**It is definitiley that a good and concise GUI is a significant role in the chatting box. So, after many researching, I chose [PyQT5](https://doc.qt.io/qtforpython-6/) to construct my chatting-box interactive interference because PyQt5 is a powerful and flexible GUI development tool that combines the simplicity and ease of use of Python with the cross-platform nature and richness of the Qt framework. It is suitable for a variety of GUI development projects from simple widgets to large applications.  
-&emsp;&emsp;What's more, in order to providing better using experinece, we use threading to receive and send messages, using UDP protocol to realizing real-time-video-chatting so that we could save internet resources, and we also apply hashirstlib to tackle TCP packet fragmentation in TCP file transfer。**
-
-  
+&emsp;&emsp;What's more, in order to providing better using experinece, we use threading to receive and send messages, using UDP protocol to realizing real-time-video-chatting so that we could save internet resources, and we also apply hashirstlib to tackle TCP packet fragmentation in TCP file transfer.**    
+&emsp;&emsp;The following shows the run of those functions(it may costs some time to load the picture, or you can see them in **result/**):
+* Register Reminder:
+  &emsp;&emsp;![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/reminder_msg.gif)
+* Text Chatting:    
+  &emsp;&emsp;![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/assets/111033998/f039926c-8f1d-45ef-bd27-1cfc13e6c291)
+* Real-time Video Chatting:    
+  &emsp;&emsp;![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/video.gif)
+* File Transferring:     
+  &emsp;&emsp;![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/file_transition.gif)
   
 ## 2. Environment and Dependencies
 
@@ -77,7 +84,7 @@ $ python chatting-box\test\main.py
 &emsp;&emsp; **Waht's more, thanks to the Threading, we also can send text message when we use Real-Time-Video Chatting. The following gif shows how the function works. You also can [click here](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/video.gif) to see how the Real-Time-Video Chatting works.**  
 ![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/video.gif)
 ### 3.4 File Transfer
-&emsp;&emsp; **We have chosen the TCP protocol for the file transfer process because we need to ensure the accuracy of the file transfer. What's more, in order to ensure the correctness of the file transfer, we also need to introduce MD5 encryption to further ensure the correctness of the file transfer**
+&emsp;&emsp; **We have chosen the TCP protocol for the file transfer process because we need to ensure the accuracy of the file transfer. What's more, in order to ensure the correctness of the file transfer, we also need to introduce MD5 encryption to further ensure the correctness of the file transfer.**  
 &emsp;&emsp; **However, I meet a problem in filing transfer. We introduce MD5 encryption to ensure the correctness of the file transfer, but there always exist an erro that the file transfer occur an erro. Nevertheless, contrasting the sending file with the received file, there dosenot have any visual difference. After I searchinng many information, I konw that the erro happen because I didnot pay attention to the common problem in file transfer: the problem of TCP packet fragmentation. The following gif shows the problem of TCP packet fragmentation in file transfer.**  
 ![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/file_transition.gif)
 &emsp;&emsp; **So, we need to solve the problem of sticky packets in the process of sending files, we can solve the problem of sticky packets by reading the file size before sending the file and adjusting the length of the last received file when the reading is about to be completed.**   
