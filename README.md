@@ -18,7 +18,7 @@
 * Register Reminder:
   &emsp;&emsp;![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/reminder_msg.gif)
 * Text Chatting:    
-  &emsp;&emsp;![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/assets/111033998/f039926c-8f1d-45ef-bd27-1cfc13e6c291)
+  &emsp;&emsp;![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/communication.gif)
 * Real-time Video Chatting:    
   &emsp;&emsp;![image](https://github.com/unswimmingduck/Real-Time-Chatting-Box/blob/main/result/video.gif)
 * File Transferring:     
